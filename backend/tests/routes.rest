@@ -1,0 +1,41 @@
+###GET every record from polls table
+
+GET http://localhost:3000/polls
+Content-Type: application/json
+
+
+###POST record into polls table
+
+POST http://localhost:3000/polls
+Content-Type: application/json
+
+{
+    "title":"Teszt 2"
+
+}
+
+### DELETE from polls table
+DELETE http://localhost:3000/polls/3
+Content-Type: application/json
+
+//-----------------OPTIONS-----------------
+
+###POST record into polls table
+
+POST http://localhost:3000/options
+Content-Type: application/json
+
+{
+    "poll_id":"2",
+    "name":"Teszt option22"
+
+}
+
+###GET all options of each polls
+GET http://localhost:3000/polls/1/options
+Content-Type: application/json
+
+
+###DELETE option from options table
+DELETE http://localhost:3000/options/2
+Content-Type: application/json
