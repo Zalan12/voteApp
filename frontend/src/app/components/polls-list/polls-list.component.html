@@ -1,0 +1,21 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Név</th>
+      <th scope="col">Létrehozva ekkor</th>
+      <th scope="col">Műveletek</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let poll of polls">
+    <td>{{poll.id}}</td>
+    <td>{{poll.title}}</td>
+    <td>{{poll.created_at}}</td>
+    <td>
+        <button class="btn btn-primary" routerLink="/pollsDetail/{{poll.id}}">Megnyitás</button>
+        <button class="btn btn-success">Eredmények</button>
+        <button class="btn btn-danger" (click)="deletePoll(poll.id)">Törlés</button>
+    </td>
+  </tbody>
+</table>
